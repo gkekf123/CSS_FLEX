@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* display: inline-flex; */
+        background-color: yellow;
+        padding: 20px;
+      }
+      .container .items {
+        background-color: green;
+        margin: 10px;
+      }
+
+      .container2 {
+        display: flex;
+        /* row 기본값 */
+        /* 주축(배치방향) - 서브축(배치방향반대) */
+        flex-direction: column-reverse;
+        background-color: yellow;
+        padding: 20px;
+      }
+      .container2 .items {
+        background-color: red;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .container3 {
+        display: flex;
+        /* item의 줄바꿈 설정 */
+        /* flex-direction: row;
+        flex-wrap: wrap; nowrap; */
+        /* flex-flow는 direction과 wrap을 동시에 적용하는 속성 */
+        flex-flow: row wrap;
+        background-color: yellow;
+        padding: 20px;
+        width: 500px;
+      }
+      .container3 .items {
+        background-color: blue;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>flex vs inlineflex</h3>
+
+    <div class="container">
+      <div class="items">flex1</div>
+      <div class="items">flex2</div>
+      <div class="items">flex3</div>
+    </div>
+
+    <div class="container">
+      <div class="items">flex4</div>
+      <div class="items">flex5</div>
+      <div class="items">flex6</div>
+    </div>
+
+    <hr />
+
+    <h3>flex-direction 주축에 대한 설정</h3>
+
+    <div class="container2">
+      <div class="items">flex1</div>
+      <div class="items">flex2</div>
+      <div class="items">flex3</div>
+    </div>
+
+    <h3>flex-wtap(컨테이너에 공간이 없을 때 줄바꿈 설정)</h3>
+
+    <div class="container3">
+      <div class="items">flex1</div>
+      <div class="items">flex2</div>
+      <div class="items">flex3</div>
+      <div class="items">flex1</div>
+      <div class="items">flex2</div>
+      <div class="items">flex3</div>
+      <div class="items">flex1</div>
+      <div class="items">flex2</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+      <div class="items">flex3</div>
+    </div>
+  </body>
+</html>
